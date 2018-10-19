@@ -1,0 +1,34 @@
+[System]
+Name='fuzzysad'
+Type='sugeno'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=5
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='input1'
+Range=[-0.8727 0.8727]
+NumMFs=5
+MF1='mf2':'trimf',[-0.8727 -0.4364 0]
+MF2='mf3':'trimf',[-0.4364 6.939e-18 0.4364]
+MF3='mf4':'trimf',[0 0.4364 0.8727]
+MF4='mf4':'trapmf',[-100.7 -99.96 -0.7854 -0.4364]
+MF5='mf6':'trapmf',[0.4364 0.7854 99.96 100.7]
+
+[Output1]
+Name='output1'
+Range=[0.865633229031909 2.7088284810975]
+NumMFs=5
+MF1='A1':'constant',[2.42402608617477]
+MF2='A2':'constant',[2.7088284810975]
+MF3='A3':'constant',[2.55900857142857]
+MF4='A4':'constant',[1.92963205252607]
+MF5='A5':'constant',[0.865633229031909]
+
+[Rules]

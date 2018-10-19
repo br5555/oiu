@@ -1,0 +1,7 @@
+Za prvi zadatak pokrenite skriptu "zadatak1",
+za drugi zadatak pokrenite skriptu "zadatak2",
+Za treci zadatak pokrenite skriptu "zadatak3",
+za cetvrti zadatak pokrenite skriptu "zadatak4".
+
+Pokretanjem skripti odsimulirat æe se svi modeli te
+ce se automatski iscrtati sve potrebne slike.

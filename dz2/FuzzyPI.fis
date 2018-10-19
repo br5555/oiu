@@ -1,0 +1,42 @@
+[System]
+Name='fuzzyPI'
+Type='sugeno'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=0
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='c_e'
+Range=[-4 4]
+NumMFs=9
+MF1='mf1':'trimf',[-5 -4 -3]
+MF2='mf2':'trimf',[-4 -3 -2]
+MF3='mf3':'trimf',[-3 -2 -1]
+MF4='mf4':'trimf',[-2 -1 0]
+MF5='mf5':'trimf',[-1 0 1]
+MF6='mf6':'trimf',[0 1 2]
+MF7='mf7':'trimf',[1 2 3]
+MF8='mf8':'trimf',[2 3 4]
+MF9='mf9':'trimf',[3 4 5]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=9
+MF1='mf1':'constant',[0]
+MF2='mf2':'constant',[0.125]
+MF3='mf3':'constant',[0.25]
+MF4='mf4':'constant',[0.375]
+MF5='mf5':'constant',[0.5]
+MF6='mf6':'constant',[0.625]
+MF7='mf7':'constant',[0.75]
+MF8='mf8':'constant',[0.875]
+MF9='mf9':'constant',[1]
+
+[Rules]

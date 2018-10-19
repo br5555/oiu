@@ -1,0 +1,35 @@
+# Plot data relevant for controller tuning
+
+# Time responses
+figure()
+title('Time responses along x and y axes.')
+subplot(2,1,1), plot(t,x), plot(t,x_ref), xlabel('t'), ylabel('x')
+subplot(2,1,2), plot(t,y), plot(t,y_ref), xlabel('t'), ylabel('y')
+
+# x-errors
+figure()
+title('Errors along x-axis')
+e_x = x_ref - x
+de_x = diff(e_x)
+subplot(2,1,1), plot(t,e_x), xlabel('t'), ylabel('e_x')
+subplot(2,1,2), plot(t[0:-1],de_x), xlabel('t'), ylabel('de_x')
+
+
+# y-errors
+figure()
+title('Errors along y-axis')
+e_y = y_ref - y
+de_y = diff(e_y)
+subplot(2,1,1), plot(t,e_y), xlabel('t'), ylabel('e_y')
+subplot(2,1,2), plot(t[0:-1],de_y), xlabel('t'), ylabel('de_y')
+
+# Controller outputs
+# Requires controller parameters 
+figure()
+title('Controller outputs along x-axis')
+u_ex = K_x * e_x
+u_dex = Kd_x * de_x / Td
+subplot(2,1,1), plot(t,K_x*e_x), plot(t[0:-1],u_dex), xlabel('t'), ylabel('u_ex,u_dex')
+plot(t[0:-1],u_ex[0:-1]+u_dex)
+# Actual actuator output (with saturations)
+subplot(2,1,2)

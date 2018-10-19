@@ -1,0 +1,96 @@
+[System]
+Name='struct'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=0
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='de'
+Range=[-10 10]
+NumMFs=9
+MF1='mf1':'trimf',[-12.5 -10 -7.5]
+MF2='mf2':'trimf',[-10 -7.5 -5]
+MF3='mf3':'trimf',[-7.5 -5 -2.5]
+MF4='mf4':'trimf',[-5 -2.5 0]
+MF5='mf5':'trimf',[-2.5 -2.776e-17 2.5]
+MF6='mf6':'trimf',[0 2.5 5]
+MF7='mf7':'trimf',[2.5 5 7.5]
+MF8='mf8':'trimf',[5 7.5 10]
+MF9='mf9':'trimf',[7.5 10 12.5]
+
+[Input2]
+Name='e'
+Range=[0 12]
+NumMFs=9
+MF1='mf1':'trimf',[-1.5 2.776e-17 1.5]
+MF2='mf2':'trimf',[0 1.5 3]
+MF3='mf3':'trimf',[1.5 3 4.5]
+MF4='mf4':'trimf',[3 4.5 6]
+MF5='mf5':'trimf',[4.5 6 7.5]
+MF6='mf6':'trimf',[6 7.5 9]
+MF7='mf7':'trimf',[7.5 9 10.5]
+MF8='mf8':'trimf',[9 10.5 12]
+MF9='mf9':'trimf',[10.5 12 13.5]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=49
+MF1='mf1':'constant',[0]
+MF2='mf2':'constant',[0.5]
+MF3='mf3':'constant',[1]
+MF4='mf4':'constant',[0]
+MF5='mf5':'constant',[0.125]
+MF6='mf6':'constant',[0.25]
+MF7='mf7':'constant',[0.375]
+MF8='mf8':'constant',[0.5]
+MF9='mf9':'constant',[0.625]
+MF10='mf10':'constant',[0.75]
+MF11='mf11':'constant',[0.875]
+MF12='mf12':'constant',[1]
+MF13='mf13':'constant',[0]
+MF14='mf14':'constant',[0.125]
+MF15='mf15':'constant',[0.25]
+MF16='mf16':'constant',[0.375]
+MF17='mf17':'constant',[0.5]
+MF18='mf18':'constant',[0.625]
+MF19='mf19':'constant',[0.75]
+MF20='mf20':'constant',[0.875]
+MF21='mf21':'constant',[1]
+MF22='mf22':'constant',[0]
+MF23='mf23':'constant',[0.125]
+MF24='mf24':'constant',[0.25]
+MF25='mf25':'constant',[0.375]
+MF26='mf26':'constant',[0.5]
+MF27='mf27':'constant',[0.625]
+MF28='mf28':'constant',[0.75]
+MF29='mf29':'constant',[0.875]
+MF30='mf30':'constant',[1]
+MF31='mf31':'constant',[0]
+MF32='mf32':'constant',[0.125]
+MF33='mf33':'constant',[0.25]
+MF34='mf34':'constant',[0.375]
+MF35='mf35':'constant',[0.5]
+MF36='mf36':'constant',[0.625]
+MF37='mf37':'constant',[0.75]
+MF38='mf38':'constant',[0.875]
+MF39='mf39':'constant',[1]
+MF40='mf40':'constant',[0]
+MF41='mf41':'constant',[0.125]
+MF42='mf42':'constant',[0.25]
+MF43='mf43':'constant',[0.375]
+MF44='mf44':'constant',[0.5]
+MF45='mf45':'constant',[0.625]
+MF46='mf46':'constant',[0.75]
+MF47='mf47':'constant',[0.875]
+MF48='mf48':'constant',[1]
+MF49='mf49':'constant',[0.5]
+
+[Rules]

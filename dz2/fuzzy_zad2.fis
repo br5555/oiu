@@ -1,0 +1,51 @@
+[System]
+Name='fuzzy_zad2'
+Type='sugeno'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='input1'
+Range=[-6 6]
+NumMFs=9
+MF1='mf1':'trimf',[-Inf -6 -4.5]
+MF2='mf2':'trimf',[-6 -4.5 -3]
+MF3='mf3':'trimf',[-4.5 -3 -1.5]
+MF4='mf4':'trimf',[-3 -1.5 0]
+MF5='mf5':'trimf',[-1.5 0 1.5]
+MF6='mf6':'trimf',[0 1.5 3]
+MF7='mf7':'trimf',[1.5 3 4.5]
+MF8='mf8':'trimf',[3 4.5 6]
+MF9='mf9':'trimf',[4.5 6 Inf]
+
+[Output1]
+Name='output1'
+Range=[-6 6]
+NumMFs=9
+MF1='A1':'constant',[6]
+MF2='A2':'constant',[4.5]
+MF3='A3':'constant',[3]
+MF4='A4':'constant',[1.5]
+MF5='A5':'constant',[-0]
+MF6='A6':'constant',[-1.5]
+MF7='A7':'constant',[-3]
+MF8='A8':'constant',[-4.5]
+MF9='A9':'constant',[-6]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1
+3, 3 (1) : 1
+4, 4 (1) : 1
+5, 5 (1) : 1
+6, 6 (1) : 1
+7, 7 (1) : 1
+8, 8 (1) : 1
+9, 9 (1) : 1
